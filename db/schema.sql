@@ -1,21 +1,12 @@
 ### Schema
-CREATE DATABASE pets_db;
-USE pets_db;
+CREATE DATABASE burgers_db;
+USE burgers_db;
 
-CREATE TABLE buyers
+CREATE TABLE burgers
 (
 	id int NOT NULL AUTO_INCREMENT,
-	buyer_name varchar(255) NOT NULL,
+	burger_name varchar(255) NOT NULL,
+	devoured BOOLEAN,
 	PRIMARY KEY (id)
 );
 
-CREATE TABLE pets
-(
-	id int NOT NULL AUTO_INCREMENT,
-	animal_breed varchar(255) NOT NULL,
-	animal_name varchar(255) NOT NULL,
-	price int NOT NULL,
-	buyer_id int NOT NULL,
-	PRIMARY KEY (id),
-	FOREIGN KEY (buyer_id) REFERENCES buyers(id)
-);
